@@ -1,0 +1,22 @@
+{
+  "name": "webjive-pricing-table",
+  "label": "WebJIVE Pricing Table",
+  "category": "pricing",
+  "icon": "📊",
+  "attributes": {
+    "tableId": {
+      "type": "select",
+      "label": "Select Pricing Table",
+      "default": "0",
+      "options": "dynamic:pricingTables",
+      "description": "Choose which pricing table to display"
+    }
+  },
+  "settings": {
+    "advanced": {
+      "css": {
+        "main": ".webjive-pricing-table-wrapper"
+      }
+    }
+  }
+}

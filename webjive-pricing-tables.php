@@ -2,8 +2,8 @@
 /*
 Plugin Name: WebJIVE Pricing Tables
 Plugin URI: https://www.web-jive.com
-Description: Create and manage unlimited responsive pricing tables with shortcodes
-Version: 1.0.0
+Description: Create and manage unlimited responsive pricing tables with shortcodes. Includes native DIVI 5 visual builder module.
+Version: 1.1.0
 Author: WebJIVE
 Author URI: https://www.web-jive.com
 License: GPL2
@@ -12,7 +12,7 @@ Text Domain: webjive-pricing-tables
 
 if (!defined('ABSPATH')) exit;
 
-define('WJPT_VERSION', '1.0.0');
+define('WJPT_VERSION', '1.1.0');
 define('WJPT_PATH', plugin_dir_path(__FILE__));
 define('WJPT_URL', plugin_dir_url(__FILE__));
 
@@ -595,3 +595,8 @@ class WebJIVE_Pricing_Tables {
 }
 
 new WebJIVE_Pricing_Tables();
+
+// Load DIVI 5 integration if DIVI is active
+if (defined('ET_BUILDER_VERSION')) {
+    require_once WJPT_PATH . 'includes/divi5-integration.php';
+}
