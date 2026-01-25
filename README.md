@@ -455,6 +455,15 @@ Feature Name|Value 1|  Value2  |Value 3
 
 ## 📝 Changelog
 
+### Version 1.2.0 (2025-01-25)
+**Version Update Release**
+
+**Changes:**
+- Version bumped to 1.2.0 to differentiate from legacy versions
+- Simplified plugin description
+- No functional changes from 1.0.0
+- Clean production release
+
 ### Version 1.0.0 (2025-01-25)
 **Initial Release**
 
@@ -507,7 +516,7 @@ GPL2 - Free to use and modify
 ---
 
 **Plugin:** WebJIVE Pricing Tables  
-**Version:** 1.0.0  
+**Version:** 1.2.0  
 **Author:** WebJIVE  
 **Website:** https://www.web-jive.com  
 **Repository:** https://github.com/webjive/webjive-pricing-tables

@@ -2,46 +2,13 @@
 
 All notable changes to WebJIVE Pricing Tables will be documented in this file.
 
-## [1.1.0] - 2025-01-25
+## [1.2.0] - 2025-01-25
 
-### Added - DIVI 5 Visual Builder Integration
-- **Native DIVI 5 Module** - "WebJIVE Pricing Table" module in visual builder
-- **Visual Builder Support** - Drag and drop pricing tables in DIVI 5
-- **Real-time Preview** - See tables update live in visual builder
-- **Table Dropdown** - Select from all published pricing tables
-- **REST API Integration** - `/wp-json/webjive-pricing-tables/v1/` endpoints
-- **Build System** - Webpack + Babel for module compilation
-- **Module Metadata** - Full DIVI 5 JSON configuration
-- **Dynamic Options** - Pricing tables populate automatically
-- **Builder Placeholder** - Visual placeholder when no table selected
-- **CSS Integration** - Advanced DIVI CSS targeting support
-
-### Technical Details
-- REST API endpoint: `/wp-json/webjive-pricing-tables/v1/table/{id}`
-- REST API endpoint: `/wp-json/webjive-pricing-tables/v1/tables`
-- Module slug: `webjive_pricing_table`
-- React-based module with ModuleContainer
-- Webpack build to `divi-module/build/module.js`
-- Auto-detection of DIVI 5 via `ET_BUILDER_VERSION`
-
-### Development
-- `npm run build` - Production build
-- `npm run dev` - Development build with watch mode
-- Babel transpilation for React JSX
-- External React/ReactDOM dependencies
-
-### Files Added
-- `divi-module/index.js` - Main module component
-- `divi-module/module.json` - Module metadata
-- `includes/divi5-integration.php` - PHP integration class
-- `package.json` - NPM dependencies and scripts
-- `webpack.config.js` - Build configuration
-- `.babelrc` - Babel configuration
-
-### Compatibility
-- Works alongside v1.0.0 shortcode functionality
-- Backward compatible with DIVI 4 (shortcode still works)
-- No breaking changes to existing installations
+### Version Update
+- Bumped version to 1.2.0 to differentiate from legacy versions
+- No functional changes from 1.0.0
+- Clean release for production deployment
+- Simplified description (removed DIVI 5 module reference for clarity)
 
 ## [1.0.0] - 2025-01-25
 
