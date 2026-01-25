@@ -1,0 +1,168 @@
+/* WebJIVE Pricing Table DIVI Module Styles */
+
+.webjive-pricing-table-wrapper {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Desktop Table Styles */
+.webjive-pricing-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.webjive-pricing-table td {
+    padding: 1rem;
+    border: 1px solid #DDDDDD;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.webjive-pricing-table .pricing-table-header td {
+    padding: 1.5rem 1rem;
+    font-weight: 600;
+    font-size: 1.1rem;
+    border: none;
+}
+
+.webjive-pricing-table .feature-label-header {
+    background: #2C2C2C !important;
+    color: #ffffff !important;
+    font-size: 1rem;
+}
+
+.webjive-pricing-table .feature-label {
+    text-align: left;
+    font-weight: 600;
+    color: #2C2C2C;
+    width: 25%;
+}
+
+.webjive-pricing-table .feature-value {
+    color: #4A4A4A;
+}
+
+/* Hover effects for desktop */
+@media screen and (min-width: 768px) {
+    .webjive-pricing-table tbody tr:not(.pricing-table-header):hover {
+        background: #FFF8F5;
+        transform: scale(1.01);
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 12px rgba(234, 107, 45, 0.2);
+    }
+}
+
+/* Hide mobile cards on desktop */
+.mobile-tier-cards {
+    display: none;
+}
+
+/* Tablet Styles */
+@media screen and (max-width: 1024px) {
+    .webjive-pricing-table {
+        font-size: 0.95rem;
+    }
+    
+    .webjive-pricing-table td {
+        padding: 0.8rem 0.6rem;
+    }
+    
+    .webjive-pricing-table .pricing-table-header td {
+        font-size: 1rem;
+        padding: 1.2rem 0.6rem;
+    }
+}
+
+/* Mobile Styles - Tier-Based Cards */
+@media screen and (max-width: 767px) {
+    .webjive-pricing-table {
+        display: none;
+    }
+    
+    .mobile-tier-cards {
+        display: block !important;
+    }
+    
+    .tier-card {
+        margin-bottom: 2rem;
+        border: 2px solid #DDDDDD;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        background: #ffffff;
+    }
+    
+    .tier-card-header {
+        background: linear-gradient(135deg, #EA6B2D 0%, #D55B1F 100%);
+        color: #ffffff;
+        font-weight: 700;
+        font-size: 1.1rem;
+        text-align: center;
+        padding: 1.5rem 1rem;
+        border-bottom: 3px solid #D55B1F;
+        line-height: 1.6;
+    }
+    
+    .tier-card-body {
+        padding: 0;
+    }
+    
+    .tier-feature-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem;
+        border-bottom: 1px solid #DDDDDD;
+    }
+    
+    .tier-feature-row:last-child {
+        border-bottom: none;
+    }
+    
+    .tier-feature-row:nth-child(even) {
+        background: #F5F5F5;
+    }
+    
+    .tier-feature-label {
+        font-weight: 700;
+        color: #2C2C2C;
+        flex: 0 0 50%;
+        text-align: left;
+    }
+    
+    .tier-feature-value {
+        text-align: right;
+        color: #4A4A4A;
+        flex: 0 0 48%;
+    }
+}
+
+/* Visual Builder Support */
+.et-fb .webjive-pricing-table-wrapper {
+    min-height: 50px;
+}
+
+.et-fb .mobile-tier-cards {
+    display: none !important;
+}
+
+/* Print Styles */
+@media print {
+    .webjive-pricing-table {
+        box-shadow: none;
+        border: 1px solid #DDDDDD;
+    }
+    
+    .mobile-tier-cards {
+        display: none !important;
+    }
+    
+    .webjive-pricing-table {
+        display: table !important;
+    }
+}

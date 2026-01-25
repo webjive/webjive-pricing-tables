@@ -1,0 +1,20 @@
+# OS Files
+.DS_Store
+Thumbs.db
+*.log
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Build files
+*.zip
+node_modules/
+vendor/
+
+# WordPress
+wp-content/
+wp-config.php
+.htaccess

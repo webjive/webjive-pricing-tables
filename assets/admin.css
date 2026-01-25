@@ -1,0 +1,44 @@
+/* Admin Styling for Pricing Tables */
+
+#pricing_table_shortcode .inside {
+    padding: 0 !important;
+}
+
+#pricing_table_shortcode .inside > div {
+    margin: 0;
+}
+
+.column-header-field {
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background: #f9f9f9;
+}
+
+.column-header-field h3 {
+    margin-top: 0;
+    color: #EA6B2D;
+}
+
+.wjpt-color-picker {
+    max-width: 100px;
+}
+
+/* Make the features textarea more usable */
+#wjpt_features {
+    line-height: 1.6;
+}
+
+/* Custom columns in list view */
+.column-shortcode {
+    width: 250px;
+}
+
+.column-columns {
+    width: 100px;
+}
+
+/* Improve form table styling */
+.form-table th {
+    width: 200px;
+}
