@@ -2,6 +2,13 @@
 
 All notable changes to WebJIVE Pricing Tables will be documented in this file.
 
+## [1.2.0] - 2025-01-25
+
+### Version Update
+- Bumped version to 1.2.0 to differentiate from legacy versions
+- No functional changes from 1.0.0
+- Clean release for production deployment
+
 ## [1.0.0] - 2026-01-25
 
 ### Added
