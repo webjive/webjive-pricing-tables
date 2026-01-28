@@ -14,11 +14,9 @@ jQuery(document).ready(function($) {
             var $headerRow = $rows.first();
             var $featureRows = $rows.slice(1);
             
-            // Get header cells (skip first cell if it's the feature label header)
+            // Get header cells - PHP always renders feature-label-header as first cell, so always skip it
             var $headerCells = $headerRow.find('td');
-            // Always check if first cell is a feature-label-header (PHP always renders it)
-            var hasFeatureLabelColumn = $headerCells.first().hasClass('feature-label-header');
-            var startIndex = hasFeatureLabelColumn ? 1 : 0;
+            var startIndex = 1;
             
             // Create a card for each column
             for (var colIndex = 0; colIndex < columnCount; colIndex++) {
