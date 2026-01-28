@@ -36,11 +36,8 @@ jQuery(document).ready(function($) {
                     var $row = $(this);
                     var $cells = $row.find('td');
 
-                    // Get feature label from the .feature-label cell if it exists
-                    var $labelCell = $row.find('td.feature-label');
-                    var featureLabel = $labelCell.length > 0 ?
-                        $labelCell.text().trim() :
-                        'Feature ' + (rowIndex + 1);
+                    // Get feature label from the first cell (feature label column)
+                    var featureLabel = $cells.first().text().trim() || 'Feature ' + (rowIndex + 1);
 
                     var featureValue = $cells.eq(colIndex + startIndex).html();
 
