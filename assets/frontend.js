@@ -18,8 +18,8 @@ jQuery(document).ready(function($) {
             
             // Get header cells (skip first cell if it's the feature label header)
             var $headerCells = $headerRow.find('td');
-            var showLabels = $wrapper.data('show-labels') === 'on';
-            var hasFeatureLabelColumn = showLabels && $headerCells.first().hasClass('feature-label-header');
+            // Always check if first cell is a feature-label-header (PHP always renders it)
+            var hasFeatureLabelColumn = $headerCells.first().hasClass('feature-label-header');
             var startIndex = hasFeatureLabelColumn ? 1 : 0;
             
             // Create a card for each column
@@ -34,20 +34,22 @@ jQuery(document).ready(function($) {
                 // Card body with features
                 var $cardBody = $('<div class="tier-card-body"></div>');
                 
-                $featureRows.each(function() {
+                $featureRows.each(function(rowIndex) {
                     var $row = $(this);
                     var $cells = $row.find('td');
-                    
-                    var featureLabel = hasFeatureLabelColumn ? 
-                        $cells.first().text().trim() : 
-                        'Feature ' + ($cells.index() + 1);
-                    
+
+                    // Get feature label from the .feature-label cell if it exists
+                    var $labelCell = $row.find('td.feature-label');
+                    var featureLabel = $labelCell.length > 0 ?
+                        $labelCell.text().trim() :
+                        'Feature ' + (rowIndex + 1);
+
                     var featureValue = $cells.eq(colIndex + startIndex).html();
-                    
+
                     var $featureRow = $('<div class="tier-feature-row"></div>');
                     var $label = $('<div class="tier-feature-label"></div>').text(featureLabel);
                     var $value = $('<div class="tier-feature-value"></div>').html(featureValue);
-                    
+
                     $featureRow.append($label).append($value);
                     $cardBody.append($featureRow);
                 });
