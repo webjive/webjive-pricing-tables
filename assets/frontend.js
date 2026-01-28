@@ -10,9 +10,8 @@ jQuery(document).ready(function($) {
             $mobileContainer.empty();
             
             var columnCount = parseInt($wrapper.data('columns')) || 3;
-            var $rows = $table.find('tbody tr');
-            var $headerRow = $rows.first();
-            var $featureRows = $rows.slice(1);
+            var $headerRow = $table.find('tr.pricing-table-header');
+            var $featureRows = $table.find('tbody tr').not('.pricing-table-header');
             
             // Get header cells - PHP always renders feature-label-header as first cell, so always skip it
             var $headerCells = $headerRow.find('td');
