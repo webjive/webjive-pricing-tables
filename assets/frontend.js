@@ -6,10 +6,8 @@ jQuery(document).ready(function($) {
             var $table = $wrapper.find('.webjive-pricing-table');
             var $mobileContainer = $wrapper.find('.mobile-tier-cards');
             
-            // Skip if already processed
-            if ($mobileContainer.children().length > 0) {
-                return;
-            }
+            // Clear any existing cards and regenerate
+            $mobileContainer.empty();
             
             var columnCount = parseInt($wrapper.data('columns')) || 3;
             var $rows = $table.find('tbody tr');
